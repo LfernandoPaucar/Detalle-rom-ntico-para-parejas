@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container-efecto{
+    background-image: url(./fotos-pareja/foto-paraja-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 900px;
+    border-radius: 15px;
+}
+
+.reproductor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 0;
+}
+
+.reproductor::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.img-reproductor{
+    background-color: f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.img-reproductor img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.info-reproductor{
+    background-color: #ffffff9a;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.barra-progres{
+    position: relative;
+    height: 6px;
+    background-color: #979797;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.bar{
+    height: 100%;
+    width: 40%;
+    background-color: #dd8a0e;
+    border-radius: 4px;
+}
+
+.tumb{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    background: #000000;
+    border-radius: 50%;
+}
