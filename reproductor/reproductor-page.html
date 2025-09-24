@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <div id="fondo"></div>
         <section class="container-efecto">
             <div class="reproductor">
                 <div class="img-reproductor">
@@ -25,10 +26,10 @@
                     <h2 class="titulo-cancion">Título de la canción</h2>
                     <p class="artista">Artista</p>
                     <div class="controles-reproductor">
-                    <button class="btn-control">Anterior</button>
-                    <button class="btn-control">Reproducir/Pausar</button>
-                    <button class="btn-control">Siguiente</button>
-                </div>
+                        <button class="btn-control" type="button"><img src="./fotos-pareja/izquierda.svg" alt="btn-anterior"></button>
+                        <button class="btn-control" type="button"><img src="./fotos-pareja/boton-play.svg" alt="btn-play-pause"></button>
+                        <button class="btn-control" type="button"><img src="./fotos-pareja/derecha.svg" alt="btn-siguiente"></button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -36,5 +37,28 @@
     <footer>
 
     </footer>
+
+    <script src="three.r134.min.js"></script>
+    <script src="vanta.birds.min.js"></script>
+    <script>
+    VANTA.BIRDS({
+        el: "#fondo",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0x0,
+        color1: 0xfa650a,
+        color2: 0xe6bb00,
+        colorMode: "variance",
+        birdSize: 1.30,
+        speedLimit: 6.00,
+        separation: 38.00,
+        alignment: 32.00
+    });
+</script>
 </body>
 </html>
