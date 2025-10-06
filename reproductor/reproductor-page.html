@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos-reproductor.css">
+    <script src="https://kit.fontawesome.com/057370d226.js" crossorigin="anonymous"></script>
     <title>Reproductor</title>
 </head>
-<body>
+<body id="vanta-bg">
+    <div id="particles-js"></div>
+    <div class="count-particles"> <span class="js-count-particles"></span></div>
     <main>
         <div id="fondo"></div>
         <section class="container-efecto">
@@ -15,20 +18,33 @@
                     <img src="./fotos-pareja/foto-paraja-1.jpg" alt="fotos-pareja">
                 </div>
                 <div class="info-reproductor">
-                    <audio controls class="audio-player">
-                        <source src="ruta-de-la-cancion.mp3" type="audio/mpeg">
+                    <audio id="audio-player">
+                        <source src="./sounds/Gone, Gone, Gone - Phillip Phillips.mp3" type="audio/mpeg">
                         Tu navegador no soporta el elemento de audio.
                     </audio>
-                    <div class="barra-progres">
+                    <div id="barra-progres">
                         <div class="bar"></div>
                         <div class="tumb"></div>
                     </div>
+                    <div id="time-play">0:00 / 0:00</div>
                     <h2 class="titulo-cancion">Título de la canción</h2>
                     <p class="artista">Artista</p>
                     <div class="controles-reproductor">
-                        <button class="btn-control" type="button"><img src="./fotos-pareja/izquierda.svg" alt="btn-anterior"></button>
-                        <button class="btn-control" type="button"><img src="./fotos-pareja/boton-play.svg" alt="btn-play-pause"></button>
-                        <button class="btn-control" type="button"><img src="./fotos-pareja/derecha.svg" alt="btn-siguiente"></button>
+                        <button id="btn-previus" class="btn-control" type="button" aria-label="Anterior-cancion">
+                            <span class="icon-color-izquierda">
+                                <i class="fa-solid fa-angle-right fa-rotate-180 fa-4x" style="color: #3d3d3d" ></i>
+                            </span>
+                        </button>
+                        <button id="btn-play-pause" class="btn-control" type="button" aria-label="Reproducir canción">
+                            <span class="icon-color">
+                            <i class="fa-solid fa-play fa-4x"></i>
+                            </span>
+                        </button>
+                        <button id="btn-next" class="btn-control" type="button" aria-label="Siguiente-cancion">
+                            <span class="icon-color-derecha">
+                                <i class="fa-solid fa-angle-right fa-4x" style="color: #3d3d3d" ></i>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -37,28 +53,8 @@
     <footer>
 
     </footer>
-
-    <script src="three.r134.min.js"></script>
-    <script src="vanta.birds.min.js"></script>
-    <script>
-    VANTA.BIRDS({
-        el: "#fondo",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: 0x0,
-        color1: 0xfa650a,
-        color2: 0xe6bb00,
-        colorMode: "variance",
-        birdSize: 1.30,
-        speedLimit: 6.00,
-        separation: 38.00,
-        alignment: 32.00
-    });
-</script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="./reproducto-script.js"></script>
 </body>
 </html>

@@ -1,7 +1,61 @@
 body{
     margin: 0;
-    font-family: Arial, sans-serif;
     overflow: hidden;
+    color: #f0f0f5; 
+    font: normal 75% Arial, Helvetica, sans-serif;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+}
+canvas {
+    display: block;
+    vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -2;
+} /* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13e8e9;
+    font-size: 0.8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+.js-count-particles {
+    font-size: 1.1em;
+}
+#stats,
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+#stats {
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+.count-particles {
+    border-radius: 0 0 3px 3px;
 }
 
 main{
@@ -11,6 +65,7 @@ main{
     justify-content: center;
     height: 100vh;
 }
+
 
 #fondo{
     position: absolute;
@@ -39,12 +94,13 @@ main{
     align-items: center;
     padding: 20px;
     border-radius: 15px;
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(202, 159, 73, 0.466);
     backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
     -webkit-backdrop-filter: blur(10px);
     z-index: 0;
 }
@@ -68,26 +124,34 @@ main{
 .img-reproductor img{
     max-width: 100%;
     border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(236, 186, 46, 0.767), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
 }
 
 .info-reproductor{
-    background-color: #ffffff9a;
+    background-color: #eea300cb;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.3) inset;
     padding: 20px;
     border-radius: 20px;
 }
 
-.barra-progres{
+#barra-progres{
     position: relative;
+    align-items: center;
     height: 6px;
-    background-color: #979797;
+    background-color: #cabb75;
     border-radius: 4px;
     cursor: pointer;
 }
-
+#time-play{
+    margin: 10px;
+    right: 0;
+    font-size: 16px;
+    color: #ffffff;
+}
 .bar{
     height: 100%;
     width: 40%;
-    background-color: #dd8a0e;
+    background-color: #643d02;
     border-radius: 4px;
 }
 
@@ -96,10 +160,14 @@ main{
     top: 50%;
     left: 40%;
     transform: translate(-50%, -50%);
-    width: 14px;
-    height: 14px;
-    background: #000000;
+    width: 16px;
+    height: 16px;
+    background: #e46e00;
     border-radius: 50%;
+}
+
+.info-reproductor .titulo-cancion{
+    color: #333;
 }
 
 .controles-reproductor{
@@ -116,13 +184,16 @@ main{
     padding: 0;             /* elimina espacio extra */
     cursor: pointer;        /* cursor tipo "mano" */
     outline: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.btn-control:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
-.btn-control img{
-    width: 50px;
-    cursor: pointer;
-    transition: transform 0.2s;
+.btn-control .icon-color{
+    color: rgb(0, 0, 0)bdb;
 }
-.btn-control img:hover{
-    transform: scale(1.1);
-}
+
+
+
