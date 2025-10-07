@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./estilos-reproductor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/057370d226.js" crossorigin="anonymous"></script>
     <title>Reproductor</title>
 </head>
@@ -15,7 +18,7 @@
         <section class="container-efecto">
             <div class="reproductor">
                 <div class="img-reproductor">
-                    <img src="./fotos-pareja/foto-paraja-1.jpg" alt="fotos-pareja">
+                    <img id="current-imagen" src="./fotos-pareja/foto-pareja-1.webp" alt="fotos-pareja">
                 </div>
                 <div class="info-reproductor">
                     <audio id="audio-player">
@@ -29,6 +32,7 @@
                     <div id="time-play">0:00 / 0:00</div>
                     <h2 class="titulo-cancion">Título de la canción</h2>
                     <p class="artista">Artista</p>
+                    <p id="song-coment"></p>
                     <div class="controles-reproductor">
                         <button id="btn-previus" class="btn-control" type="button" aria-label="Anterior-cancion">
                             <span class="icon-color-izquierda">

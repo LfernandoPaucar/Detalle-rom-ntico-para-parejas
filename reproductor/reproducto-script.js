@@ -90,15 +90,38 @@ const tumb = progressBarContainer.querySelector('.tumb'); // El círculo (thumb)
 const timeDisplay = document.getElementById('time-play');
 const titleElement = document.querySelector('.titulo-cancion');
 const artistElement = document.querySelector('.artista');
+const songImagen = document.getElementById('current-imagen');
+const songCommentElement = document.getElementById('song-coment');
+
 
 const arrayCanciones = [
-    { titulo: "Sunday Morning", artista: "Maroon 5", src: "./sounds/Maroon 5 - Sunday Morning.mp3" },
-    { titulo: "Colgando en tus manos", artista: "Carlos Baute", src: "./sounds/Carlos Baute - Colgando en tus manos (con Marta Sanchez).mp3" },
-    { titulo: "First Times", artista: "Ed Sheeran", src: "./sounds/Ed Sheeran - First Times.mp3" }, 
-    { titulo: "Todo no es casualidad", artista: "Dani J", src: "./sounds/Todo No Es Casualidad.mp3" }, 
-    { titulo: "Solo quiero", artista: "Jonny Sky", src: "./sounds/Solo Quiero.mp3" }, 
-    { titulo: "Can't Help Falling In Love", artista: "Twenty One Pilots", src: "./sounds/twenty one pilots - Can't Help Falling In Love.mp3" }, 
-    { titulo: "Gone, Gone, Gone", artista: "Phillip Phillips", src: "./sounds/Gone, Gone, Gone - Phillip Phillips.mp3" }
+    { titulo: "Sunday Morning", 
+      artista: "Maroon 5", 
+      src: "./sounds/Maroon 5 - Sunday Morning.mp3", imagen: "./fotos-pareja/foto-pareja-1.webp", comentario: "Recuerdo cuando escuche esta canción y algo dentro de mi dijo: Estas donde tienes que estar..." },
+    { titulo: "Colgando en tus manos", 
+      artista: "Carlos Baute", 
+      src: "./sounds/Carlos Baute - Colgando en tus manos (con Marta Sanchez).mp3", 
+      imagen: "./fotos-pareja/foto-pareja-2.webp", comentario: "No paraba imaginarnos a ambos bailando esta canción, lo lindo que se sentia esos primeros días y lo hermosos que siguen siendo."},
+    { titulo: "First Times", 
+      artista: "Ed Sheeran", 
+      src: "./sounds/Ed Sheeran - First Times.mp3", 
+      imagen: "./fotos-pareja/foto-pareja-3.webp", comentario: "Esta canción me pone muy sensible, por que ella interpretaba todo aquello que sentia por ti cuando te dije para estar." }, 
+    { titulo: "Todo no es casualidad", 
+      artista: "Dani J", 
+      src: "./sounds/Todo No Es Casualidad.mp3", 
+      imagen: "./fotos-pareja/foto-pareja-5.webp", comentario: "La cancion que recordara nuestro reencuentro, cuando menos lo esperabamos, dios decidio volver a encontrarnos." }, 
+    { titulo: "Solo quiero", 
+      artista: "Jonny Sky", 
+      src: "./sounds/Solo Quiero.mp3", 
+      imagen: "./fotos-pareja/foto-pareja-6.webp", comentario: "Si hablamos de una aventura que quedo marcada en nuestros corazones, ellos son nuestros dos campeonatos." }, 
+    { titulo: "Can't Help Falling In Love", 
+      artista: "Twenty One Pilots", 
+      src: "./sounds/twenty one pilots - Can't Help Falling In Love.mp3", 
+      imagen: "./fotos-pareja/foto-pareja-4.webp", comentario: "No pude evitar enamorme de ti cada día." }, 
+    { titulo: "Gone, Gone, Gone", 
+      artista: "Phillip Phillips", 
+      src: "./sounds/Gone, Gone, Gone - Phillip Phillips.mp3", 
+      imagen: "./fotos-pareja/foto-pareja-8.webp", comentario: "Donde vayas yo estare contigo." }
 ];
 
 let currentSongIndex = 0;
@@ -131,6 +154,9 @@ function loadSong(index){
     musicaAudio.src = song.src;
     titleElement.textContent = song.titulo;
     artistElement.textContent = song.artista;
+    songImagen.src = song.imagen;
+    songCommentElement.textContent = song.comentario;
+
     
     // Si ya estaba reproduciendo, debe empezar a sonar la nueva
     if (isPlaying){

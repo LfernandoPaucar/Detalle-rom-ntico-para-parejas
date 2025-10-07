@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const flor = document.getElementById('flor-container');
 const fraseFlor = document.getElementById('frase-mensaje');
-const botonFlor = document.getElementById('boton-flor');
+const botonFlor = document.getElementById('btn-continue');
 
-const frases = ["Se que no te lo digo a menudo", "pero la vida fue muy gentil conmigo al ponerte en mi camino", "y quiero que sepas que te amo con todo mi corazón.", " y aunque a veces no haga las cosas bien en los momentos que lo necesitas","siempre me ezforzare por darte la mejor version de mi", "Te regalo esta rosa amarilla, como simbolo de que mi vida es mas brillante y feliz desde que estas en ella.", "Te amo mi Sofhia"];
+const frases = ["1 año mas juntos mi vida", "Otra vuelta al sol, donde vivimos ditintos momentos, muchas emociones y nuevos capitulos de nuestra historia.", "Como aquellos bailes en una alameda", ", se termiron transformando en los dos años mas maravillosos de mi vida.","Dos años que son solo el inicio de muchos mas.", "Mi compañera de vida", "Te amo mi Sofhia", "Gracias por elegirme cada día", "Por hacerme la persona mas feliz del mundo", "Por ser mi amiga, mi confidente, mi amor", "Por ser tú, simplemente tú.", "Feliz aniversario mi amor."];
 
 let indiceFraseActual = 0;
 

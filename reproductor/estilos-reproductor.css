@@ -2,13 +2,14 @@ body{
     margin: 0;
     overflow: hidden;
     color: #f0f0f5; 
-    font: normal 75% Arial, Helvetica, sans-serif;
+    font-family: "Playwrite HU", cursive;
     min-height: 100vh; 
     display: flex;
     justify-content: center; 
     align-items: center;
     padding: 20px;
 }
+
 canvas {
     display: block;
     vertical-align: bottom;

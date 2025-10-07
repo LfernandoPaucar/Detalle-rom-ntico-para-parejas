@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Playwrite HU", cursive;
     overflow: hidden;
 }
 
@@ -17,15 +17,44 @@ body{
     justify-content: center;
     align-items: center;
     color: white;
+    gap: 20px
 }
 
-#boton-flor {
-    background-size: contain;
-    border: none;
-    width: 100px;
-    height: 100px;
+button {
     cursor: pointer;
-    margin-top: 20px;
+    font-weight: 700;
+    transition: all 0.2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #eb7b7b;
+    color: #d4d4d4;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+#btn-continue img{
+    width: 24px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #ffffff;
+    color: #f85757;
+}
+
+button > svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover svg {
+    transform: translateX(5px);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 .rosa{
