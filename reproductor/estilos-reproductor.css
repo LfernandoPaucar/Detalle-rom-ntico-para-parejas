@@ -12,7 +12,6 @@ body{
 
 canvas {
     display: block;
-    vertical-align: bottom;
 } /* ---- particles.js container ---- */
 #particles-js {
     position: fixed;
@@ -50,14 +49,13 @@ canvas {
     -webkit-user-select: none;
     margin-top: 5px;
     margin-left: 5px;
+    border-radius: 0 0 3px 3px;
 }
 #stats {
     border-radius: 3px 3px 0 0;
     overflow: hidden;
 }
-.count-particles {
-    border-radius: 0 0 3px 3px;
-}
+
 
 main{
     display: flex;
