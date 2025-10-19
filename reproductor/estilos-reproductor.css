@@ -281,6 +281,7 @@ main{
     }
     main {/* Una sola columna en pantallas pequeñas */
         width: 400px;
+        width: 932px;
     }
     #particles-js{
         overflow: hidden;
@@ -293,8 +294,8 @@ main{
         max-width: 350px;
         border-radius: 7.5px;
         display: flex;
-        flex-direction: column-reverse;
-        gap: 10px;
+        flex-direction: column;
+        gap: 0px;
     }
     .reproductor {
         display: grid;
